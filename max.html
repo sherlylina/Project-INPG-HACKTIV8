@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAXIMUM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Patrick+Hand|Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/max.css">
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+ <div class="content clearfix">
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-sm-3">
+       <div class="player-0-panel active">
+          <div class="player-name" id="name-0">Player 1</div>
+          <div class="player-score" id="score-0">0</div>
+       </div>
+      </div>
+       <div class="col-sm-6">
+         <div class="timer">
+            <text>Time: <text id="time">20</text></text>
+         </div>
+       <button class="btn-new">
+            <i class="ion-ios-plus-outline"></i> Start Game
+        </button>
+          <div id="drag-drop-game">
+              <div class="row place-drop">
+                 <div class="ques ui-widget-header" id="ques-1"></div>
+                 <div class="ans ui-widget-header dropable" id="ans-1">...</div>
+                 <div class="ques ui-widget-header" id="ques-2"></div>
+                 <div class="ans ui-widget-header dropable2" id="ans-2">...</div>
+                 <div class="ques ui-widget-header" id="ques-3"></div>
+              </div>
+            <div class="row choose-drop">
+              <div class="box ui-widget-content dragable" id="box-1">+</div>
+              <div class="box ui-widget-content dragable" id="box-2">x</div>
+              <div class="box ui-widget-content dragable" id="box-3">:</div>
+              <div class="box ui-widget-content dragable" id="box-4">-</div>
+           </div> 
+        </div>
+           <button class="btn-roll">
+              <i class="ion-ios-loop"></i> Lets Dig!
+            </button>
+              
+           <button class="btn-hold">
+              <i class="ion-ios-download-outline"></i> Hold
+           </button>
+           
+           <button class="btn-check">
+            <i class="icon ion-ios-checkmark"></i> Check
+          </button>
+
+           <input type="text" value = "0" id="result" placeholder="Result">
+           <input type="text" value = "5" id="final-score" placeholder="Final Score">
+              
+        </div>
+
+       <div class="col-sm-3">
+       <div class="player-1-panel">
+         <div class="player-name" id="name-1">Player 2</div>
+         <div class="player-score" id="score-1">0</div>
+       </div>
+       </div>
+    </div>
+   </div>  
+  </div>
+
+ <script src="max.js"></script>
+</body>
+</html>
