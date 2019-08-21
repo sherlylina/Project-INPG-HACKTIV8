@@ -1,9 +1,22 @@
-let drag1, drag2, scores, activePlayer, gamePlaying,result, resultEnd, finalEnd;
+let drag1, drag2, scores, activePlayer, gamePlaying,result, resultEnd, finalEnd, sound;
+
+
+sound = document.getElementById('funSong')
+
+function playAudio() { 
+  sound.play(); 
+} 
+
+function pauseAudio() { 
+  sound.pause(); 
+}
+
 
 function deklarisasi(){
   scores = [0, 0];
   gamePlaying = true;
   activePlayer = 0;
+  playAudio();
   document.getElementById('time').innerHTML = "30";
   timeUp = "-";
   document.getElementById('ques-1').style.display = "none";
@@ -25,6 +38,7 @@ function deklarisasi(){
   
 
   document.getElementById('result').value = "0";
+  document.getElementById('final-score').value = "0";
   document.querySelector('.player-0-panel').classList.remove('active');
   document.querySelector('.player-1-panel').classList.remove('active');
   document.querySelector('.player-0-panel').classList.remove('winner');
@@ -42,6 +56,7 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
    if(gamePlaying){
      update = setInterval("timeDeal()",1000);
      timeUp = 30;
+     playAudio();
      let x = 20;
      let o = -20;
      let a = Math.floor(Math.random() * x) -5
@@ -53,10 +68,8 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
      result = Math.max(a+b+c, a-b-c, a+b*c, a*b+c, a-b*c, a*b-c, a*b*c, a/b+c, a+b/c, a/b-c, a-b/c, a*b/c, a/b*c, a/b/c);
      let operator = [['+','+'],['-','-'],['+','x'],
                      ['x','+'],['-','x'],['x','-'],
-                     ['x','x'],[':','+'],['+',':'],
-                     [':','-'],['-',':'],['x',':'],
-                     [':','x'],[':',':']
-                   ];
+                     ['x','x']
+                    ];
     let tile = document.getElementsByClassName('ans')
     let temp1 = ''
     let temp2 = ''
@@ -65,7 +78,7 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
            let hitung = a+b+c
            if(hitung == result){
            temp1 = '+'
-            temp2 = "+"
+           temp2 = '+'
           }
         }
         if(operator[i] == '-','-'){
@@ -110,56 +123,7 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
           temp2 = 'x'
          }
        }
-       if(operator[i] == ':','+'){
-           let hitung = a/b+c
-           if(hitung == result){
-           temp1 = ':'
-           temp2 = '+'
-          }
-       }
-       if(operator[i] == '+',':'){
-           let hitung = a+b/c
-           if(hitung == result){
-           temp1 = '+'
-           temp2 = ':'
-          }
-       }
-        if(operator[i] == ':','-'){
-           let hitung = a/b-c
-           if(hitung == result){
-           temp1 = ':'
-           temp2 = '-'
-          }
-        }
-        if(operator[i] == '-',':'){
-           let hitung = a-b/c
-           if(hitung == result){
-           temp1 = '-'
-           temp2 = ':'
-          }
-        }
-       if(operator[i] == 'x',':'){
-         let hitung = a*b/c
-         if(hitung == result){
-         temp1 = 'x'
-         temp2 = ':'
-        }
-      }
-      if(operator[i] == ':','x'){
-        let hitung = a/b*c
-        if(hitung == result){
-        temp1 = ":"
-        temp2 = 'x'
-       }
-     }
-     if(operator[i] == ':',':'){
-       let hitung = a/b/c
-       if(hitung == result){
-       temp1 = ':'
-       temp2 = ':'
-      }
     }
-  }
    tile[0].setAttribute("title", temp1);
    tile[1].setAttribute("title", temp2);
    document.getElementById('ques-1').style.display = "block";
@@ -317,7 +281,8 @@ document.querySelector('.btn-check').addEventListener('click',function(){
       
            document.querySelector('.player-'+activePlayer+'-panel').classList.add('winner');
            document.querySelector('.player-'+activePlayer+'-panel').classList.remove('active');
-     
+           
+           pauseAudio();
            gamePlaying = false;
           }else{
            drag1 = false;

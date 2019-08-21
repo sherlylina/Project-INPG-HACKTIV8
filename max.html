@@ -21,18 +21,19 @@
    <div class="container-fluid">
      <div class="row">
        <div class="col-sm-3">
-       <div class="player-0-panel active">
-          <div class="player-name" id="name-0">Player 1</div>
-          <div class="player-score" id="score-0">0</div>
+          <div class="player-0-panel active">
+             <div class="player-name" id="name-0">Player 1</div>
+             <div class="player-score" id="score-0">0</div>
+          </div>
        </div>
-      </div>
+
        <div class="col-sm-6">
-         <div class="timer">
+           <div class="timer">
             <text>Time: <text id="time">20</text></text>
-         </div>
-       <button class="btn-new">
-            <i class="ion-ios-plus-outline"></i> Start Game
-        </button>
+           </div>
+           <button class="btn-new">
+             <i class="ion-ios-plus-outline"></i> Start Game
+           </button>
           <div id="drag-drop-game">
               <div class="row place-drop">
                  <div class="ques ui-widget-header" id="ques-1"></div>
@@ -41,13 +42,13 @@
                  <div class="ans ui-widget-header dropable2" id="ans-2">...</div>
                  <div class="ques ui-widget-header" id="ques-3"></div>
               </div>
-            <div class="row choose-drop">
-              <div class="box ui-widget-content dragable" id="box-1">+</div>
-              <div class="box ui-widget-content dragable" id="box-2">x</div>
-              <div class="box ui-widget-content dragable" id="box-3">:</div>
-              <div class="box ui-widget-content dragable" id="box-4">-</div>
-           </div> 
-        </div>
+             <div class="row choose-drop">
+               <div class="box ui-widget-content dragable" id="box-1">+</div>
+               <div class="box ui-widget-content dragable" id="box-2">x</div>
+               <div class="box ui-widget-content dragable" id="box-3">:</div>
+               <div class="box ui-widget-content dragable" id="box-4">-</div>
+             </div> 
+          </div>
            <button class="btn-roll">
               <i class="ion-ios-loop"></i> Lets Dig!
             </button>
@@ -61,19 +62,24 @@
           </button>
 
            <input type="text" value = "0" id="result" placeholder="Result">
-           <input type="text" value = "5" id="final-score" placeholder="Final Score">
-              
-        </div>
+           <input type="text" value = "0" id="final-score" placeholder="Final Score">   
+     </div>
 
-       <div class="col-sm-3">
-       <div class="player-1-panel">
-         <div class="player-name" id="name-1">Player 2</div>
-         <div class="player-score" id="score-1">0</div>
-       </div>
-       </div>
+      <div class="col-sm-3">
+        <div class="player-1-panel">
+          <div class="player-name" id="name-1">Player 2</div>
+          <div class="player-score" id="score-1">0</div>
+        </div>
+      </div>
+   
+    
+    <audio id="funSong">
+      <source src="css/fun.mp3" type="audio/mpeg">
+    </audio>
+
     </div>
-   </div>  
-  </div>
+  </div>  
+ </div>
 
  <script src="max.js"></script>
 </body>

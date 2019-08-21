@@ -4,8 +4,7 @@ Math Play ( Find Maximum )
 
 Rule :
 1. game ini terdiri dari 2 players dengan timer 30s
-2. untuk memulai game, input terlebih dahulu "final score" jika tidak mau by default yaitu 5, setelah itu click "start game".
-   setelah itu click "lets dig" untuk memulai permainan tetapi setelah mengclick "lets dig" dilarang mengclick "start game" lagi
+2. untuk memulai game, input terlebih dahulu "final score", setelah itu click "start    game". setelah itu click "lets dig" untuk memulai permainan tetapi setelah           mengclick "lets dig" dilarang mengclick "start game" lagi
    ataupun mengclick "lets dig" lagi untuk yang kedua kali karna akan terjadi error untuk menghindari kecurangan mereset angka 
    yang diberikan atau score yang sudah masuk. Untuk mengulang permainan bisa dengan "refresh" kembali. Untuk mengclick "start game"
    lagi bisa setelah permainan selesai.
