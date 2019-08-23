@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MAXIMUM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Handlee|Patrick+Hand|Vidaloka&display=swap" rel="stylesheet">
@@ -17,7 +16,7 @@
 </head>
 <body>
 
- <div class="content clearfix">
+ <div class="content">
    <div class="container-fluid">
      <div class="row">
        <div class="col-sm-3">
@@ -32,7 +31,7 @@
             <text>Time: <text id="time">20</text></text>
            </div>
            <button class="btn-new">
-             <i class="ion-ios-plus-outline"></i> Start Game
+              <ion-icon name="logo-game-controller-b"></ion-icon> Start Game
            </button>
           <div id="drag-drop-game">
               <div class="row place-drop">
@@ -50,15 +49,15 @@
              </div> 
           </div>
            <button class="btn-roll">
-              <i class="ion-ios-loop"></i> Lets Dig!
+             <ion-icon name="sync"></ion-icon> Lets Dig!
             </button>
               
            <button class="btn-hold">
-              <i class="ion-ios-download-outline"></i> Hold
+              <ion-icon name="remove-circle-outline"></ion-icon>  Hold
            </button>
            
            <button class="btn-check">
-            <i class="icon ion-ios-checkmark"></i> Check
+              <ion-icon name="checkmark-circle-outline"></ion-icon> Check
           </button>
 
            <input type="text" value = "0" id="result" placeholder="Result">
@@ -81,6 +80,8 @@
   </div>  
  </div>
 
+
+ <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
  <script src="max.js"></script>
 </body>
 </html>
