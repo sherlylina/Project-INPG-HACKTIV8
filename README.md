@@ -1,6 +1,6 @@
 # Project-INPG-HACKTIV8
 
-Math Play ( Find Maximum )
+Math Play ( Find Maximum of Total )
 
 Rule :
 1. game ini terdiri dari 2 players dengan timer 30s
